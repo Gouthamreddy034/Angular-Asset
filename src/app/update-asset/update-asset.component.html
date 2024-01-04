@@ -1,0 +1,77 @@
+<div class="container">
+  <h1>Asset Update Form</h1>
+  <form novalidate [formGroup]="assetUpdate" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="assetdes">Asset Desc</label>
+      <input 
+      type="text" 
+      class="form-control" 
+      id="assetdes" 
+      name="assetdes" 
+      formControlName="assetdes"
+      placeholder="Asset Desc"
+      [value]=asset.assetdes>
+    </div>
+    <div class="form-group">
+      <label for="equipmentcode">Equipment Code</label>
+      <input 
+      type="text"
+      class="form-control"
+      id="equipmentcode"
+      name="equipmentcode"
+      formControlName="equipmentcode"
+      placeholder="Equipment Code"
+      [value]=asset.equipmentcode
+      >
+    </div>
+    <div class="form-group">
+      <label for="installationdate">Installation Date</label>
+      <input 
+      type="date"
+      class="form-control"
+      id="installationdate"
+      name="installationdate"
+      formControlName="installationdate"
+      placeholder="installation date"
+      [value]= asset.installationdate
+      >
+    </div>
+    <div class="form-group">
+      <label for="siteid">Select Site</label>
+      <select 
+      name="siteid" 
+      id="siteid"
+      class="form-control"
+      formControlName="siteid" 
+      [value]=asset.siteid
+      >
+      <option *ngFor="let site of sites" [value]="site">{{site}}</option>
+    </select>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select 
+      name="status" 
+      id="status"
+      class="form-control"
+      formControlName="status"
+      [value]=asset.status
+      >
+      <option *ngFor="let status of status" [value]="status">{{status}}</option>
+    </select>
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <select 
+      name="location" 
+      id="location"
+      class="form-control"
+      formControlName="location"
+      [value]=asset.location
+      >
+      <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+    </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

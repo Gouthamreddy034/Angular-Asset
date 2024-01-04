@@ -1,0 +1,31 @@
+<div class="container">
+  <h3 class="text-center">List of Created Assets!</h3>
+  <table class="table table-striped" aria-describedby="mydesc">
+      <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">assetDes</th>
+            <th scope="col">siteid</th>
+            <th scope="col">status</th>
+            <th scope="col">location</th>
+            <th scope="col">equipmentcode</th>
+            <th scope="col">created_by</th>
+            <th scope="col">installationdate</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of assets;let id = index">
+            <td ><a routerLink = '/update-asset' [queryParams]="{id: asset.assetnum}"queryParamsHandling="merge">{{asset.assetnum}}</a></td>
+            <td>{{ asset.assetdes }}</td>
+            <td>{{ asset.siteid }}</td>
+            <td>{{ asset.status }}</td>
+            <td>{{ asset.location }}</td>
+            <td>{{ asset.equipmentcode }}</td>
+            <td>{{ asset.created_by }}</td>
+            <td>{{ asset.installationdate }}</td>
+            <td>{{ asset.date }}</td>
+          </tr>
+        </tbody>
+  </table>
+</div>

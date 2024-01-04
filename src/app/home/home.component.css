@@ -1,0 +1,49 @@
+
+nav ul {
+  list-style: none;
+  background-color: blue;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  border: 1px solid white;
+  margin:2px;
+  background-color:dodgerblue
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid white;
+  color: black;
+}
+
+.dropbtn {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid white;
+  color: #000;
+  background-color: dodgerblue;
+}
+
+.dropdown-content {
+  display: none;
+  border: #000;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a:hover {background-color: dodgerblue;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #6dc4ef;}
+
